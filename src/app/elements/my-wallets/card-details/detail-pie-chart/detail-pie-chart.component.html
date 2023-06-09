@@ -1,0 +1,65 @@
+<div class="d-flex align-items-end">
+    <div id="pieChart">
+    
+        <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [labels]="chartOptions.labels"
+            [responsive]="chartOptions.responsive"
+            [dataLabels]="chartOptions.dataLabels"
+            [stroke]="chartOptions.stroke"
+            [colors]="chartOptions.colors"
+            [legend]="chartOptions.legend"
+        ></apx-chart>
+        
+    </div>
+    <div>
+        <div class="d-flex mb-4">
+            <svg class="mr-sm-3 mr-2 mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="14" height="14" rx="4" fill="#5EE173"/>
+            </svg>
+            <div>
+                <p class="fs-14 text-black mb-0">Installment</p>
+                <span class="fs-20 text-black font-w600">24%</span>
+            </div>
+        </div>
+        <div class="d-flex">
+            <svg class="mr-sm-3 mr-2 mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="14" height="14" rx="4" fill="#3A82EF"/>
+            </svg>
+            <div>
+                <p class="fs-14 text-black mb-0">Rent</p>
+                <span class="fs-20 text-black font-w600">28%</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex mt-4">
+    <div class="d-flex mr-3">
+        <svg class="mr-sm-3 mr-2 mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="14" height="14" rx="4" fill="#FF495F"/>
+        </svg>
+        <div>
+            <p class="fs-14 text-black mb-0">Food</p>
+            <span class="fs-20 text-black font-w600">18%</span>
+        </div>
+    </div>
+    <div class="d-flex mr-3">
+        <svg class="mr-sm-3 mr-2 mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="14" height="14" rx="4" fill="#FFB038"/>
+        </svg>
+        <div>
+            <p class="fs-14 text-black mb-0">Restaurant</p>
+            <span class="fs-20 text-black font-w600">21%</span>
+        </div>
+    </div>
+    <div class="d-flex">
+        <svg class="mr-sm-3 mr-2 mt-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="14" height="14" rx="4" fill="#EE3CD2"/>
+        </svg>
+        <div>
+            <p class="fs-14 text-black mb-0">Investment</p>
+            <span class="fs-20 text-black font-w600">9%</span>
+        </div>
+    </div>
+</div>

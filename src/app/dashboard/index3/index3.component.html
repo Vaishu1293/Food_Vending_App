@@ -1,0 +1,424 @@
+
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <app-dashboard-crousal1 [data] = "quickTransfer"></app-dashboard-crousal1>
+            </div>
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0 text-black fs-20">Buy</h4>
+                        <p class="mb-0">0.03253643</p>
+                    </div>
+                    <div class="card-body">
+                        <app-buy-sell-form [data]="buyFormData"></app-buy-sell-form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0 text-black fs-20">Sell</h4>
+                        <p class="mb-0">0.03253643</p>
+                    </div>
+                    <div class="card-body">
+                        <app-buy-sell-form [data]="sellFormData"></app-buy-sell-form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8">
+                <app-das3-graph1></app-das3-graph1>
+            </div>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-header border-0 pb-0">
+                        <h4 class="mb-0 text-black fs-20">Sell Order</h4>
+                        <div class="dropdown ml-auto dropdown-no-icon" ngbDropdown>
+                            <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+                            </div>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                                <a class="dropdown-item" href="#">Edit</a>
+                                <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <div class="table-responsive">
+                            <table class="table text-center bg-info-hover tr-rounded">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Price</th>
+                                        <th class="text-center">Amount</th>
+                                        <th class="text-right">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left">82.3</td>
+                                        <td>0.15</td>
+                                        <td class="text-right">$134,12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">83.9</td>
+                                        <td>0.18</td>
+                                        <td class="text-right">$237,31</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">84.2</td>
+                                        <td>0.25</td>
+                                        <td class="text-right">$252,58</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">86.2</td>
+                                        <td>0.35</td>
+                                        <td class="text-right">$126,26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">91.6</td>
+                                        <td>0.75</td>
+                                        <td class="text-right">$46,92</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">92.6</td>
+                                        <td>0.21</td>
+                                        <td class="text-right">$123,27</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">93.9</td>
+                                        <td>0.55</td>
+                                        <td class="text-right">$212,56</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">94.2</td>
+                                        <td>0.18</td>
+                                        <td class="text-right">$129,26</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <div class="mt-3 mt-sm-0">
+                            
+                            
+                            <ul class="nav nav-tabs" role="tablist" ngbNav #nav="ngbNav" >
+                                <li class="nav-item" ngbNavItem="navpills-1">
+                                    <a class="nav-link" data-toggle="tab" href="#navpills-1" role="tab" aria-selected="false" ngbNavLink>
+                                        MY TRADES	
+                                    </a>
+                                    <ng-template ngbNavContent>
+                                        <div class="table-responsive">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Date - Time</th>
+                                                            <th scope="col">Asset</th>
+                                                            <th scope="col">Base</th>
+                                                            <th scope="col">Cr. Amount</th>
+                                                            <th scope="col">Price</th>
+                                                            <th scope="col">Buy/Sell</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Thu Oct 17 2019 11:03:53</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>0.0099&nbsp;BTC</td>
+                                                            <td>7500.000000</td>
+                                                            <td class="text-success">Buy</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Thu Oct 17 2019 11:03:53</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>6874.73481179324&nbsp;USD</td>
+                                                            <td>7016.438810</td>
+                                                            <td class="text-danger">Sell</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tue Oct 15 2019 10:08:36</td>
+                                                            <td>ETH</td>
+                                                            <td>USD</td>
+                                                            <td>0.994504&nbsp;USD</td>
+                                                            <td>172.000000</td>
+                                                            <td class="text-danger">Sell</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tue Oct 15 2019 06:38:03</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>0.08428&nbsp;USD</td>
+                                                            <td>172.000000</td>
+                                                            <td class="text-danger">Sell</td>
+                                                        </tr>
+                                                        <tr class="filter buy">
+                                                            <td>Tue Oct 15 2019 06:38:03</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>0.0005&nbsp;BTC</td>
+                                                            <td>172.000000</td>
+                                                            <td class="text-success">Buy</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mon Oct 14 2019 14:39:54</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>28.13926219202&nbsp;USD</td>
+                                                            <td>7556.192855</td>
+                                                            <td class="text-danger">Sell</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mon Oct 14 2019 14:37:09</td>
+                                                            <td>BTC</td>
+                                                            <td>USD</td>
+                                                            <td>44.90991599955&nbsp;USD</td>
+                                                            <td>8039.727175</td>
+                                                            <td class="text-danger">Sell</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </ng-template>
+                                
+                                </li>
+                                <li class="nav-item" ngbNavItem="navpills-2">
+                                    <a class="nav-link" data-toggle="tab" href="#navpills-2" role="tab" aria-selected="false" ngbNavLink>
+                                        MY OFFERS
+                                    </a>
+                                    <ng-template ngbNavContent>
+                                        <div class="table-responsive">
+                                        
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Offer Id</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Total Value</th>
+                                                        <th scope="col">Buy/Sell</th>
+                                                        <th scope="col">Edit</th>
+                                                        <th scope="col">Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Wed Oct 16 2019 09:56:03</td>
+                                                        <td class="">14374</td>
+                                                        <td class="">0.1</td>
+                                                        <td class="">8500</td>
+                                                        <td class="">850</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wed Oct 16 2019 09:48:47</td>
+                                                        <td class="">14366</td>
+                                                        <td class="">0.01</td>
+                                                        <td class="">6500</td>
+                                                        <td class="">65</td>
+                                                        <td class="text-success">Buy</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Wed Oct 16 2019 08:11:23</td>
+                                                        <td class="">14263</td>
+                                                        <td class="">0.0001</td>
+                                                        <td class="">7500</td>
+                                                        <td class="">0.75</td>
+                                                        <td class="text-success">Buy</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tue Oct 15 2019 06:38:03</td>
+                                                        <td class="">12714</td>
+                                                        <td class="">0.0009</td>
+                                                        <td class="">7000</td>
+                                                        <td class="">6.3</td>
+                                                        <td class="text-success">Buy</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mon Oct 14 2019 14:39:54</td>
+                                                        <td class="">11758</td>
+                                                        <td class="">0.001</td>
+                                                        <td class="">172</td>
+                                                        <td class="">0.17200000000000001</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        
+                                        </div>
+                                    </ng-template>
+                                </li>
+                                <li class="nav-item" ngbNavItem="navpills-3">
+                                    <a class="nav-link" data-toggle="tab" href="#navpills-3" role="tab" aria-selected="false" ngbNavLink>
+                                        STOP-LIMIT
+                                    </a>
+                                    <ng-template ngbNavContent>
+                                        <div class="table-responsive">
+                                        
+                                            <table class="table table-bordered ">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Time</th>
+                                                        <th scope="col">Offer Id</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Stop-limit Price</th>
+                                                        <th scope="col">Trigger Price</th>
+                                                        <th scope="col">Buy/Sell</th>
+                                                        <th scope="col">Edit</th>
+                                                        <th scope="col">Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aug 28, 2019, 3:49:55 PM</td>
+                                                        <td>566</td>
+                                                        <td>1</td>
+                                                        <td>80</td>
+                                                        <td>90</td>
+                                                        <td class="text-danger">Sell</td>
+                                                        <td>
+                                                            <button class="btn btn-info btn-sm">Modify</button>
+                                                        </td>
+                                                        <td>
+                                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        
+                                        </div>
+                                    </ng-template>
+                                </li>
+                            </ul>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div [ngbNavOutlet]="nav" class=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

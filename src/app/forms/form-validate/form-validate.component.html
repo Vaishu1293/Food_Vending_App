@@ -1,0 +1,307 @@
+<!--**********************************
+	Content body start
+***********************************-->
+<div class="content-body">
+  <div class="container-fluid">
+    <div class="row page-titles mx-0">
+      <div class="col-sm-6 p-md-0">
+        <div class="welcome-text">
+          <h4>Hi, welcome back!</h4>
+          <p class="mb-0">Add a new Product</p>
+        </div>
+      </div>
+      <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Products</a></li>
+          <li class="breadcrumb-item active"><a href="javascript:void(0)">Add Product</a></li>
+        </ol>
+      </div>
+    </div>
+    <!-- row -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">Add Product</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-validation">
+              <form class="form-valide" action="#" method="post" [formGroup]="angForm" novalidate>
+                <div class="row">
+                  <div class="col-xl-6">
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="product_name">Product Name
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="product_name" formControlName="product_name"
+                          placeholder="Enter a product name..">
+                        <div
+                          *ngIf="angForm.controls['product_name'].invalid && (angForm.controls['product_name'].dirty || angForm.controls['product_name'].touched)"
+                          class="text-danger fs-13 mt-1">
+
+                          <div *ngIf="angForm.controls['product_name'].errors.required">
+                            Product Name is required.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="brand_name">Brand Name
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="brand_name" formControlName="brand_name"
+                          placeholder="Enter a brand name..">
+                        <div
+                          *ngIf="angForm.controls['brand_name'].invalid && (angForm.controls['brand_name'].dirty || angForm.controls['brand_name'].touched)"
+                          class="text-danger fs-13 mt-1">
+
+                          <div *ngIf="angForm.controls['brand_name'].errors.required">
+                            Brand name is required.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="description">Description <span
+                          class="text-danger">*</span>
+                      </label>
+                      <div class="col-lg-6">
+
+                        <textarea class="form-control" id="description" rows="5" formControlName="description"
+                          placeholder="What would you like to see?"></textarea>
+
+                        <div
+                          *ngIf="angForm.controls['description'].invalid && (angForm.controls['description'].dirty || angForm.controls['description'].touched)"
+                          class="text-danger fs-13 mt-1">
+
+                          <div *ngIf="angForm.controls['description'].errors.required">
+                            Description is required.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="product_category">Product Category
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-lg-6">
+                        <select class="form-control default-select" id="product_category"
+                          formControlName="product_category">
+                          <option value="">Please select</option>
+                          <option value="burger">Burger</option>
+                          <option value="pizza">Pizza</option>
+                          <option value="fried-chicken">Fried Chicken</option>
+                          <option value="taco">Taco</option>
+                          <option value="hot-dog">Hot Dog</option>
+                          <option value="sandwich">Sandwich</option>
+                          <option value="fries">Fries</option>
+                          <option value="nuggets">Nuggets</option>
+                          <option value="ice-cream">Ice Cream</option>
+                          <option value="milkshake">Milkshake</option>
+                          <option value="soda">Soda</option>
+                          <option value="dessert">Dessert</option>
+                        </select>
+                        <div
+                          *ngIf="angForm.controls['product_category'].invalid && (angForm.controls['product_category'].dirty || angForm.controls['product_category'].touched)"
+                          class="text-danger fs-13 mt-1">
+
+                          <div *ngIf="angForm.controls['product_category'].errors.required">
+                            Select Product Category.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="expiration_date">Expiration Date <span class="text-danger">*</span></label>
+                      <div class="col-lg-6">
+                        <input type="date" class="form-control" id="expiration_date" formControlName="expiration_date"
+                          placeholder="Select expiration date" [min]="minExpirationDate">
+                        <div *ngIf="angForm.controls['expiration_date'].invalid && (angForm.controls['expiration_date'].dirty || angForm.controls['expiration_date'].touched)"
+                          class="text-danger fs-13 mt-1">
+                          <div *ngIf="angForm.controls['expiration_date'].errors.required">
+                            Expiration date is required.
+                          </div>
+                          <div *ngIf="angForm.controls['expiration_date'].errors.min">
+                            Expiration date must be a date ahead of today's date.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="stocks">Stocks</label>
+                      <div class="col-lg-6">
+                        <input type="number" class="form-control" id="stocks" formControlName="stocks" placeholder="Enter the available stocks">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="price">Price</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="price" formControlName="price" placeholder="Enter the Price">
+                      </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" #fileInput (change)="onImagePicked($event)">
+                        <label class="custom-file-label">Choose Image file</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6">
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="product_category">Product Category
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div class="col-lg-6">
+                        <select class="form-control default-select" id="country_of_origin" formControlName="country_of_origin">
+                          <option value="">Please select</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BT">Bhutan</option>
+                        </select>
+                        <div *ngIf="angForm.controls['country_of_origin'].invalid && (angForm.controls['country_of_origin'].dirty || angForm.controls['country_of_origin'].touched)"
+                          class="text-danger fs-13 mt-1">
+                          <div *ngIf="angForm.controls['country_of_origin'].errors.required">
+                            Select country of origin.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="calories">Calories</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="calories" formControlName="calories" placeholder="Enter the calories">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="fat">Fat</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="fat" formControlName="fat" placeholder="Enter the fat">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="saturated_fat">Saturated Fat</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="saturated_fat" formControlName="saturated_fat" placeholder="Enter the saturated fat">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="cholesterol">Cholesterol</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="cholesterol" formControlName="cholesterol" placeholder="Enter the cholesterol">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="sodium">Sodium</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="sodium" formControlName="sodium" placeholder="Enter the sodium">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="carbohydrates">Carbohydrates</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="carbohydrates" formControlName="carbohydrates" placeholder="Enter the carbohydrates">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="fiber">Fiber</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="fiber" formControlName="fiber" placeholder="Enter the fiber">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="sugar">Sugar</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="sugar" formControlName="sugar" placeholder="Enter the sugar">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-lg-4 col-form-label" for="protein">Protein</label>
+                      <div class="col-lg-6">
+                        <input type="text" class="form-control" id="protein" formControlName="protein" placeholder="Enter the protein">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-12">
+
+                    <div class="form-group">
+                      <label>Allergens (hold shift to select more than one):</label>
+                      <select multiple class="form-control default-select" id="allergens" formControlName="allergens">
+                        <option value="nuts">Nuts</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="gluten">Gluten</option>
+                        <option value="shellfish">Shellfish</option>
+                        <option value="soy">Soy</option>
+                        <option value="eggs">Eggs</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="fish">Fish</option>
+                        <option value="peanuts">Peanuts</option>
+                        <option value="sesame">Sesame</option>
+                        <option value="sulfites">Sulfites</option>
+                        <option value="milk">Milk</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group row" *ngIf="productId == '' ">
+                      <div class="col-lg-8 ml-auto">
+                        <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid" (click)="onAddProduct()">Submit</button>
+                      </div>
+                    </div>
+
+                    <div class="form-group row"  *ngIf="productId != '' ">
+                      <div class="col-lg-8 ml-auto">
+                        <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid" (click)="onUpdateProduct()">Update</button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--**********************************
+	Content body end
+***********************************-->

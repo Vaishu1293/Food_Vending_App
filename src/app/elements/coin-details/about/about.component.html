@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header pb-0 border-0">
+        <h4 class="mb-0 text-black fs-20">About</h4>
+        <div class="dropdown ml-auto dropdown-no-icon" ngbDropdown>
+            <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="text-center mb-3">
+            <img class="mb-3" src="{{data.image}}" alt="">
+            <h2 class="fs-24 font-w600 text-black mb-0">Digital Cash</h2>
+            <p class="fs-14 font-w600 text-black">{{data.coin_name}}</p>
+            <span class="text-primary fs-14">{{data.per_coin_price}}</span>
+        </div>
+        <div [innerHTML]="data.description"></div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="text-right mb-4">
+    <a href="javascript:void(0);" class="btn btn-primary btn-rounded">+ Add Wallet</a>
+</div>
+<div class="cards-slider-1 owl-carousel-1 mb-4" *ngIf="customOptions">
+    
+    <owl-carousel-o [options]="customOptions" class="testimonial-one owl-right-nav owl-carousel owl-loaded owl-drag">
+        <ng-template carouselSlide *ngFor = "let cardItem of data">
+    
+            <div class="items">
+                <div class="wallet-card {{cardItem.card_class}}" style="background-image:url('{{cardItem.bg_image}}');">
+                    <div class="head">
+                        <p class="fs-14 text-white mb-0 op6 font-w100">{{cardItem.title}}</p>
+                        <span>{{cardItem.price}}</span>
+                    </div>
+                    <div class="wallet-footer">
+                        <span class="fs-14">{{cardItem.card_no}}</span>
+                        <img src="{{cardItem.card_logo}}" alt="">
+                    </div>
+                </div>
+            </div>
+            </ng-template>
+        </owl-carousel-o>
+</div>

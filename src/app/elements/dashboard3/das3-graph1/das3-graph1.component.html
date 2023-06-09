@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="mb-0 text-black fs-20">ETH/BTC</h4>
+        <ul class="box-controls pull-right">	
+            <li><a class="box-btn-fullscreen" href="#"></a></li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div id="coin-chart">
+                
+            <apx-chart
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [xaxis]="chartOptions.xaxis"
+                [yaxis]="chartOptions.yaxis"
+                [title]="chartOptions.title"
+            ></apx-chart>
+            
+        </div>
+    </div>
+</div>

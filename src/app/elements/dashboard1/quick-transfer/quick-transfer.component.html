@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header d-sm-flex d-block pb-0 border-0">
+        <div>
+            <h4 class="fs-20 text-black">Quick Transfer</h4>
+            <p class="mb-0 fs-12">Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+        <div class="dropdown custom-dropdown d-block mt-3 mt-sm-0 mb-0 dropdown-no-icon" ngbDropdown>
+            <div class="btn btn-rounded border border-secondary btn-sm d-flex svg-btn align-items-center" role="button" data-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.5566 23.8931C21.1991 24.0359 20.8009 24.0359 20.4434 23.8931L16.6064 22.3582L21 31.1454L25.3936 22.3582L21.5566 23.8931Z" fill="#AC4CBC"/>
+                    <path d="M21 20.8846L26.2771 18.7739L21 10.3304L15.7229 18.7739L21 20.8846Z" fill="#AC4CBC"/>
+                    <path d="M21 9.15527e-05C9.4021 9.15527e-05 9.15527e-05 9.4021 9.15527e-05 21C9.15527e-05 32.5979 9.4021 41.9999 21 41.9999C32.5979 41.9999 41.9999 32.5979 41.9999 21C41.9871 9.40759 32.5924 0.0129089 21 9.15527e-05ZM29.8417 20.171L22.3417 35.171C21.9714 35.9121 21.07 36.2124 20.3294 35.8421C20.0387 35.697 19.8034 35.4617 19.6583 35.171L12.1583 20.171C11.9253 19.7032 11.9518 19.1479 12.2283 18.7043L19.7283 6.7045C20.2268 6.00229 21.1996 5.83658 21.9018 6.33508C22.0451 6.43671 22.17 6.56122 22.2717 6.7045L29.7712 18.7043C30.0482 19.1479 30.0747 19.7032 29.8417 20.171Z" fill="#AC4CBC"/>
+                </svg>
+                <div class="text-left mr-3 ml-3">
+                    <span class="d-block fs-16 text-black">23,511 ETH</span>
+                </div>
+                <i class="fa fa-angle-down scale5 mr-3 ml-3"></i>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item" href="javascript:void(0);">345,455 ETH</a>
+                <a class="dropdown-item" href="javascript:void(0);">789,123 ETH</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="d-flex mb-3 justify-content-between align-items-center">
+            <h4 class="text-black fs-20 mb-0">Recent Contacts</h4>
+            <a href="javascript:void(0);" class="btn-link">View more</a>
+        </div>
+        <owl-carousel-o [options]="customOptions" class="testimonial-one px-4 owl-right-nav owl-carousel owl-loaded owl-drag">
+            <!-- <div class="testimonial-one px-4 owl-right-nav owl-carousel owl-loaded owl-drag"> -->
+            <ng-template carouselSlide *ngFor = "let quictTransfer of data">
+                <div class="items">
+                    <div class="text-center">
+                        <img class="mb-3 rounded" src="{{quictTransfer.image}}" alt="">
+                        <h5 class="text-black mb-0">{{quictTransfer.name}}</h5>
+                        <span class="fs-12">{{quictTransfer.username}}</span>
+                    </div>
+                </div>
+                
+            </ng-template>
+        </owl-carousel-o>
+
+        <div class="amount-bx">
+            <label>Amount ETH</label>
+            <input type="number" class="form-control" placeholder="8,621.22">
+        </div>
+        <a href="javascript:void(0);" class="btn btn-primary d-block btn-lg text-uppercase">Send Money</a>
+    </div>
+</div>

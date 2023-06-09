@@ -1,0 +1,21 @@
+<div class="overflow-hidden bg-transparent dz-crypto-scroll shadow-none">
+    <div class="js-conveyor-example">
+        <owl-carousel-o [options]="customOptions" class="testimonial-one owl-right-nav owl-carousel owl-loaded owl-drag">
+            <!-- <div class="testimonial-one px-4 owl-right-nav owl-carousel owl-loaded owl-drag"> -->
+            <ng-template carouselSlide *ngFor = "let items of data">
+                <div class="items">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <div class="mr-auto">
+                                <p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 mr-2 text-success" aria-hidden="true"></i>{{items.success}}</p>
+                                <h2 class="text-black mb-0 font-w600">{{items.price}}</h2>
+                            </div>
+                            <img style="width:40px;" alt="" src="{{items.svg_image}}">
+
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</div>

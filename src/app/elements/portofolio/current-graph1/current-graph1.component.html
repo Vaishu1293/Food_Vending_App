@@ -1,0 +1,68 @@
+<div class="card">
+    <div class="card-header border-0 pb-0">
+        <h4 class="fs-20 text-black">Current Graph</h4>
+        <div class="dropdown ml-auto dropdown-no-icon" ngbDropdown>
+            <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-12 col-sm-12 d-flex justify-content-center">
+                <div id="pieChart">
+                        
+                    <apx-chart
+                        [series]="chartOptions.series"
+                        [chart]="chartOptions.chart"
+                        [labels]="chartOptions.labels"
+                        [responsive]="chartOptions.responsive"
+                        [dataLabels]="chartOptions.dataLabels"
+                        [stroke]="chartOptions.stroke"
+                        [colors]="chartOptions.colors"
+                        [legend]="chartOptions.legend"
+                    ></apx-chart>
+                    
+                </div>
+            </div>
+            <div class=" col-xl-12 col-sm-12">
+                <div class="row text-black fs-13 mt-4">
+                    <span class="mb-3 col-6">
+                        <svg class="mr-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="14" rx="4" fill="#3C8AFF"/>
+                        </svg>
+                        Food
+                    </span>
+                    <span class="mb-3 col-6">
+                        <svg class="mr-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="14" rx="4" fill="#FF5166"/>
+                        </svg>
+                        Rent
+                    </span>
+                    <span class="mb-3 col-6">
+                        <svg class="mr-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="14" rx="4" fill="#ED3DD1"/>
+                        </svg>
+                        Transport
+                    </span>
+                    <span class="mb-3 col-6">
+                        <svg class="mr-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="14" rx="4" fill="#2BC844"/>
+                        </svg>
+                        Installment
+                    </span>
+                    <span class="mb-3 col-6">
+                        <svg class="mr-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="14" height="14" rx="4" fill="#FFEE54"/>
+                        </svg>
+                        Investment
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

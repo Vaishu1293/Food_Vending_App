@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header pb-0 border-0">
+        <h5 class="mb-0 text-black fs-20">My Profile</h5>
+        <div class="dropdown ml-auto dropdown-no-icon" ngbDropdown>
+            <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="text-center">
+            <img src="assets/images/profile/11.jpg" alt= "" class="rounded ds-img-profile">
+            <h4 class="fs-26 mt-sm-3 mt-2 mb-sm-3 mb-0 font-w600 text-black">Johndoe</h4>	
+            <p class="mb-0 text-black ">Join on 24 March 2017</p>
+            <a [routerLink]="['/admin/app-profile']" class="btn btn-rounded btn-outline-primary mt-sm-4 mt-2"><i class="fa fa-pencil scale5 mr-3"></i>Edit prorfile</a>
+        </div>
+        <ul class="d-flex justify-content-center share-icon mt-sm-4 mt-3">
+            <li><a href="javascript:void(0);"><i class="las la-phone"></i></a></li>
+            <li><a href="javascript:void(0);"><i class="las la-envelope"></i></a></li>
+            <li><a href="javascript:void(0);"><i class="lab la-facebook-f"></i></a></li>
+        </ul>
+    </div>
+</div>

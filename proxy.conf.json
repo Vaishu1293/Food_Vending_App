@@ -1,0 +1,7 @@
+{
+  "/": {
+    "target": "https://vending-machine-app-angular-no.herokuapp.com/",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

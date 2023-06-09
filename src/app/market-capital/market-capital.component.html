@@ -1,0 +1,99 @@
+
+<!--**********************************
+    Content body start
+***********************************-->
+<div class="content-body">
+    <!-- row -->
+    <div class="container-fluid">
+        <div class="d-flex align-items-center flex-wrap mb-3">
+            <div class="input-group search-area-2 mb-3 mr-auto d-inline-flex">
+                <div class="input-group-append">
+                    <a href="javascript:void(0);" class="input-group-text"><i class="flaticon-381-search-2"></i></a>
+                </div>
+                <input type="text" class="form-control" placeholder="Search here">
+            </div>
+            <a href="javascript:void(0);" class="btn btn-primary btn-rounded mb-3 mr-3"><i class="las la-download scale5 mr-2"></i>Get Report</a>
+            <a href="javascript:void(0);" class="btn btn-outline-primary btn-rounded mb-3 mr-3"><i class="las la-calendar scale5 mr-2"></i>Filter Periode</a>
+            
+            <mat-form-field appearance="fill" class=" style-1 dashboard-select  mb-3">
+              <mat-select value="Newest">
+                <mat-option value="Newest">Newest</mat-option>
+                <mat-option value="Oldest">Oldest</mat-option>
+                <mat-option value="Latest">Newest</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="table-responsive table-hover fs-14 ">
+                    <table class="table display mb-4 dataTablesCard dataTable font-w600 short-one border-no card-table text-black" id="example6">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Coin</th>
+                                <th>Last Price</th>
+                                <th>Change (24h)</th>
+                                <th>Volume (24h)</th>
+                                <th>Graph</th>
+                                <th class="bg-none width50"></th>
+                                <th class="bg-none width50"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let item of marketHolding">
+                                <td>
+                                    <span class="{{item.rank_class}} text-primary rank-ic fs-20">{{item.rank}}</span>
+                                </td>
+                                <td class="wspace-no">
+                                    <img src="{{item.coin_image}}" class="width40 mr-3"/>
+                                    <span class="text-black">{{item.name}}</span>	
+                                </td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.change}}</td>
+                                <td>{{item.volume}}</td>
+                                <td>
+                                    <div class="market-bar">
+                                        <apx-chart
+                                            [series]="chartOptions.series"
+                                            [chart]="chartOptions.chart"
+                                            [dataLabels]="chartOptions.dataLabels"
+                                            [plotOptions]="chartOptions.plotOptions"
+                                            [yaxis]="chartOptions.yaxis"
+                                            [legend]="chartOptions.legend"
+                                            [fill]="chartOptions.fill"
+                                            [stroke]="chartOptions.stroke"
+                                            [tooltip]="chartOptions.tooltip"
+                                            [xaxis]="chartOptions.xaxis"
+                                            [grid]="chartOptions.grid"
+                                          ></apx-chart>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 wspace-no"><i class="fa scale5 mr-2 {{item.variation_class}}" aria-hidden="true"></i>{{item.variation}}</p>
+                                </td>
+                                <td>
+                                    <div class="dropdown ml-4  dropdown-no-icon" ngbDropdown>
+                                        <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z" stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                                            <a class="dropdown-item" href="javascript:void(0);">Edit</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>	
+                </div>		
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->

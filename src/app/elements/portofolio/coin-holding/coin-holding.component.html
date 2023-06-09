@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-header border-0 pb-0">
+        <h5 class="mb-0 text-black fs-20">Coin Holding</h5>
+        <div class="dropdown ml-auto dropdown-no-icon" ngbDropdown>
+            <div class="btn-link" data-toggle="dropdown" ngbDropdownToggle>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="12" cy="5" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="19" r="2"></circle></g></svg>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6" *ngFor="let coins of data">
+                <div class="card border coin-holding-card {{coins.border_class}}">
+                    <div class="card-body {{coins.bg_class}} rounded">
+                        <div class="d-flex align-items-center">
+                            <img src="{{coins.image}}" class="mr-3"/>
+                            <div>
+                                <h4 class="font-w500 text-white title mb-0">{{coins.name}}</h4>
+                                <span class="text-white fs-14 op7">{{coins.short_name}}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap mt-4 align-items-center">	
+                            <div class="d-flex align-items-center mr-auto pr-3 mb-2">
+                                <svg class="mr-3" width="42" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="3.42856" height="25.1428" rx="1.71428" transform="matrix(-1 0 0 1 24 0)" fill="white"/>
+                                    <rect width="3.42856" height="18.2856" rx="1.71428" transform="matrix(-1 0 0 1 17.1431 6.85712)" fill="white"/>
+                                    <rect width="3.42856" height="7.99997" rx="1.71428" transform="matrix(-1 0 0 1 10.2861 17.1428)" fill="white"/>
+                                    <rect width="3.86812" height="15.4725" rx="1.93406" transform="matrix(-1 0 0 1 3.86816 9.67029)" fill="white"/>
+                                </svg>
+                                <h4 class="font-w500 text-white amount mb-0">{{coins.price}}</h4>
+                            </div>
+                            <div class="mb-2">
+                                <img src="{{coins.up_down_image}}" class="mt-1 mr-1"/>
+                                <span class="text-white fs-14">{{coins.up_down}}</span>
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="card-footer d-flex justify-content-between border-0">
+                        <div class="footer-info font-w600">
+                            <span class="text-success pr-2">BUY</span>
+                            <span class="text-black">{{coins.buy}}</span>
+                        </div>
+                        <div class="footer-info font-w600">
+                            <span class="text-danger pr-2">SELL</span>
+                            <span class="text-black">{{coins.sell}}</span>
+                        </div>
+                        <a [routerLink]="['/admin/coin-details']" class="underline text-primary font-w500 footer-info">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

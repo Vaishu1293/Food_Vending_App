@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header d-block d-sm-flex border-0">
+        <div>
+            <h4 class="fs-20 text-black">Market Overview</h4>
+            <p class="mb-0 fs-12">Lorem ipsum dolor sit amet, consectetur</p>
+        </div>
+        <div class="card-action card-tabs mt-3 mt-sm-0">
+            <ul class="nav nav-tabs" role="tablist" ngbNav #nav="ngbNav" >
+                <li class="nav-item" ngbNavItem="Week">
+                    <a class="nav-link" data-toggle="tab" href="#Week" role="tab" aria-selected="false" ngbNavLink>
+                        Week	
+                    </a>
+                    <ng-template ngbNavContent>
+                        <app-weekly class="bar-chart"></app-weekly>
+                    </ng-template>
+                </li>
+                <li class="nav-item" ngbNavItem="Month">
+                    <a class="nav-link" data-toggle="tab" href="#Month" role="tab" aria-selected="false" ngbNavLink>
+                        Month
+                    </a>
+                    <ng-template ngbNavContent>
+                        <app-monthly class="bar-chart"></app-monthly>
+                    </ng-template>
+                </li>
+                <li class="nav-item" ngbNavItem="Year">
+                    <a class="nav-link" data-toggle="tab" href="#Year" role="tab" aria-selected="false" ngbNavLink>
+                        Year
+                    </a>
+                    <ng-template ngbNavContent>
+                        <app-yearly class="bar-chart"></app-yearly>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+    </div>   
+<div class="card-body pb-2">
+    <div [ngbNavOutlet]="nav" class=""></div>
+</div>
+</div>

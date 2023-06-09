@@ -1,0 +1,15 @@
+<div class="basic-form">
+    <form>
+        <div class="form-group row" *ngFor = "let items of data">
+            <label class="col-sm-3 col-form-label">{{items.title}}:</label>
+            <div class="col-sm-9">
+                <div class="input-group ds-4">
+                    <input type="text" value="{{items.text_box_val}}" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">{{items.button_val}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
